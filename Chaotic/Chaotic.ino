@@ -35,13 +35,15 @@ void loop(){
         y = ny + dt * (nx + a * ny);
         z = nz + dt * (nx - nz);
 
-        int ax = 90 + (18 * x);
+        int ax = 48 + (9 * x);
         int ay = 16 + (10 * y);
+        int az = 44 + (12 * z);
 
         if (ax == 32) digitalWrite(LED_BUILTIN, HIGH);
         else digitalWrite(LED_BUILTIN, LOW);
 
         oled.drawPixel(ax, ay);
+        oled.drawPixel(64+ax, az);
 
     }
 
